@@ -1,0 +1,77 @@
+.about .container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.about-heading {
+	text-align: center;
+	text-transform: uppercase;
+	line-height: 0;
+
+	margin-bottom: 6rem;
+
+	h1 {
+		opacity: 0.3;
+		color: rgba(255, 255, 255, 0.781);
+	}
+	h6 {
+		color: var(--header-color-h6, #0ddf6f);
+		text-decoration: underline;
+		font-weight: 300;
+		padding-top: 15px;
+	}
+}
+
+.profile-img {
+	flex: 1;
+	margin-right: 5rem;
+}
+
+.about-details {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	p {
+		padding-bottom: 0;
+	}
+}
+
+.social-media {
+	margin-top: 5rem;
+
+	i {
+		font-size: 3rem;
+		transition: color 650ms;
+	}
+}
+.btn {
+	background-color: #0ddf6f;
+	width: 8em;
+	height: 3em;
+	border: 3px solid grey;
+	margin-top: 25px;
+	border-radius: 50%;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	a {
+		color: red;
+	}
+}
+.fa-facebook-square:hover {
+	color: #4267b2;
+}
+.fa-twitter-square:hover {
+	color: #6e9bbe;
+}
+.fa-instagram-square:hover {
+	color: #ea4c89;
+}
+.fa-linkedin:hover {
+	color: #0ddf6f;
+}
+
+//.my-skills {
+//}
