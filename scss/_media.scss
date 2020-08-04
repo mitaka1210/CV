@@ -1,7 +1,7 @@
 @media screen and (max-width: 768px) {
 	body {
-		background: url("../images/img-8.jpg") no-repeat center fixed;
-		background-size: cover;
+		//background: url("../images/img-8.jpg") no-repeat center fixed;
+		//background-size: cover;
 	}
 
 	.landing-text {
@@ -59,7 +59,7 @@
 	}
 
 	.timeline .date:before {
-		left: -20rem;
+		left: -19.2rem;
 	}
 
 	.timeline .date:after {
@@ -121,6 +121,57 @@
 	}
 
 	.up {
+		right: 2rem;
+	}
+}
+
+@media screen and (max-width: 425px) {
+	body,
+	html {
+		overflow-x: hidden;
+		width: 33em;
+	}
+	.landing-text {
+		width: 22em;
+		left: -11em;
+		h1 {
+			font-size: 6rem;
+		}
+	}
+	.timeline .date:after {
+		left: -5.9rem;
+	}
+	.about .container {
+		display: flex;
+		flex-flow: column wrap;
+		align-items: center;
+		justify-content: center;
+	}
+	.about-details h1 {
+		font-size: 6rem;
+	}
+	.timeline {
+		p {
+			font-size: 1.2rem;
+			width: 260px;
+		}
+		h1 {
+			font-size: 1.2rem;
+		}
+	}
+	.nav-list {
+		padding-left: 0em;
+	}
+	.services,
+	.portfolio {
+		width: 34em;
+	}
+
+	.menu-toggler {
+		right: -5rem;
+	}
+	.up {
+		top: 0.5rem;
 		right: 2rem;
 	}
 }
