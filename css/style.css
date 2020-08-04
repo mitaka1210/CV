@@ -868,6 +868,7 @@ input[type="submit"]:hover {
   }
   .timeline .date:before {
     left: -19.2rem;
+    color: #15df1f;
   }
   .timeline .date:after {
     left: -5.5rem;
@@ -985,6 +986,6 @@ input[type="submit"]:hover {
   }
   .up {
     top: 0.5rem;
-    right: 2rem;
+    right: 1rem;
   }
 }
