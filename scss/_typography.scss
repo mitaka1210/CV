@@ -27,28 +27,28 @@ aside {
 	display: block;
 }
 
-html {
-	box-sizing: border-box;
-	//font: var(--font-size-body, 14px) / 1.5 "Raleway", Georgia, serif;
-}
+//html {
+//	box-sizing: border-box;
+//	font: var(--font-size-body, 14px) / 1.5 "Raleway", Georgia, serif;
+//}
 
-@media (min-width: 600px) {
-	html {
-		font-size: var(--font-size-body-large, 16px);
-	}
-}
+//@media (min-width: 600px) {
+//	html {
+//		font-size: var(--font-size-body-large, 16px);
+//	}
+//}
 
-@media (min-width: 1024px) {
-	html {
-		font-size: var(--font-size-body-big, 18px);
-	}
-}
+//@media (min-width: 1024px) {
+//	html {
+//		font-size: var(--font-size-body-big, 18px);
+//	}
+//}
 
-@media (min-width: 1600px) {
-	html {
-		font-size: var(--font-size-body-huge, 20px);
-	}
-}
+//@media (min-width: 1600px) {
+//	html {
+//		font-size: var(--font-size-body-huge, 20px);
+//	}
+//}
 
 body,
 table,
