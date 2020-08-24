@@ -30,15 +30,18 @@
 	width: 10rem;
 	height: 10rem;
 	border: 3px solid #ffe838;
-	background-color: #fd57bf;
+	background-color: #2df113;
 	margin-bottom: 2rem;
 	display: flex;
 	transform: rotate(45deg);
 }
 
 .icon-container i {
-	color: #ffe838;
+	color: #ff0000;
 	font-size: 5rem;
 	margin: auto;
 	transform: rotate(-45deg);
+}
+.skill:nth-child(1) {
+	margin-top: 3em;
 }
