@@ -2,6 +2,7 @@
 	body {
 		//background: url("../images/img-8.jpg") no-repeat center fixed;
 		//background-size: cover;
+		overflow-x: hidden;
 	}
 
 	.landing-text {
@@ -31,11 +32,13 @@
 			position: relative;
 			right: 0.6em;
 		}
+
 		h6 {
 			position: relative;
 			right: 8em;
 		}
 	}
+
 	html:not(.no-js) [data-aos^="fade"][data-aos^="fade"].aos-animate {
 		width: 259px;
 	}
@@ -70,6 +73,9 @@
 
 	.timeline ul {
 		margin: 0 0 0 auto;
+		position: relative;
+		left: 10rem;
+		width: 516px;
 	}
 
 	.timeline .date:before {
@@ -91,6 +97,7 @@
 	.landing-text h1 {
 		font-size: 6.5rem;
 	}
+
 	.landing-text h6 {
 		font-size: 1.4rem;
 	}
@@ -98,6 +105,7 @@
 	.nav-link {
 		font-size: 2.1rem;
 	}
+
 	.top-nav.open {
 		height: 150vh;
 	}
@@ -129,6 +137,7 @@
 			font-size: 1rem;
 			width: 300px;
 		}
+
 		p {
 			font-size: 1.6rem;
 			width: 400px;
@@ -138,6 +147,7 @@
 	.timeline .date:before {
 		font-size: 1.4rem;
 	}
+
 	.timeline .date::after {
 		left: -5.8rem;
 	}
@@ -147,65 +157,122 @@
 	}
 }
 
+@media screen and (max-width: 500px) {
+	.about-heading {
+		h1 {
+			font-size: 5em;
+			right: 0.3em;
+		}
+
+
+		h6 {
+			right: 1em;
+		}
+	}
+
+	.about-details .nav-list {
+		right: 1em;
+	}
+
+	.about-details {
+
+		.btn-btn {
+			left: 3em;
+			position: relative;
+		}
+
+		p {
+			padding-bottom: 0;
+			font-size: 1.4em;
+			width: 401px;
+		}
+	}
+
+	.timeline ul {
+		left: 3.5em;
+	}
+
+	.timeline p {
+		font-size: 1.3rem;
+		width: 300px;
+
+	}
+}
+
 @media screen and (max-width: 425px) {
+
 	body,
 	html {
 		overflow-x: hidden;
 		width: 33em;
 	}
+
 	//body .lock {
 	//	overflow: hidden;
 	//}
 	.landing-text {
 		width: 22em;
 		left: -11em;
+
 		h1 {
 			font-size: 6rem;
 		}
 	}
+
 	.timeline .date:after {
 		left: -5.9rem;
 	}
+
 	.about .container {
 		display: flex;
 		flex-flow: column wrap;
 		align-items: center;
 		justify-content: center;
 	}
+
 	.about-details {
 		h1 {
 			font-size: 6rem;
 			right: 0;
 		}
+
 		h6 {
 			right: 0;
 		}
+
 		p {
 			font-size: 1.3em;
 		}
+
 		.nav-list {
 			right: 0;
 		}
 	}
+
 	.my-skills {
 		justify-items: center;
 	}
+
 	.timeline {
 		p {
 			font-size: 1.2rem;
 			width: 260px;
 		}
+
 		h1 {
 			font-size: 1.1rem;
 			width: 300px;
 		}
+
 		ul {
 			width: 69%;
 		}
 	}
+
 	.nav-list {
 		padding-left: 0em;
 	}
+
 	.services,
 	.portfolio {
 		width: 34em;
@@ -214,9 +281,82 @@
 	.menu-toggler {
 		right: -1rem;
 	}
+
 	.up {
 		top: 0.5rem;
 		right: 1rem;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.menu-toggler {
+		right: 1rem;
+	}
+
+	header {
+		height: 60vh;
+	}
+
+	img {
+		width: 100%;
+		position: relative;
+		right: 5em;
+	}
+
+	html:not(.no-js) [data-aos^="fade"][data-aos^="fade"].aos-animate {
+		width: 281px;
+		position: relative;
+		right: 3em;
+	}
+
+	.about-details li {
+		margin: 0 1rem;
+	}
+
+	.landing-text {
+		h6 {
+			width: 251px;
+			position: relative;
+			left: 3em;
+		}
+
+		h1 {
+			font-size: 2.2rem;
+			position: relative;
+			right: 2em;
+		}
+	}
+
+	.about-details h1 {
+		font-size: 5rem;
+		right: 0.4em;
+	}
+
+	.about-details .nav-list {
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		right: 1.5em;
+	}
+
+	.timeline {
+		h1 {
+			width: 183px;
+		}
+
+		ul {
+			position: relative;
+			left: 0;
+		}
+
+		p {
+			font-size: 1rem;
+			width: 210px;
+			position: relative;
+			right: 2em;
+		}
 	}
 }
 
@@ -224,18 +364,23 @@
 	body.lock {
 		overflow: hidden;
 	}
+
 	.menu-toggler {
 		right: -8rem;
 	}
+
 	.top-nav.open {
 		height: 169vh;
 	}
+
 	.about-details .nav-list {
 		right: 0;
 	}
+
 	.my-skills {
 		justify-items: center;
 	}
+
 	.portfolio-description {
 		p {
 			font-size: 1.6em;

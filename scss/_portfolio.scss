@@ -13,15 +13,28 @@
 	flex: 1;
 }
 
+.myWebsite {
+
+
+
+	font-size: 2em;
+
+	-webkit-animation: pulseText 2s infinite alternate;
+	-webkit-transform: scale(4);
+
+}
+
 .portfolio-description {
 	flex: 1;
+
 	h6 {
 		font-size: 1.5rem;
 		text-transform: uppercase;
 		font-weight: 300;
-		
+
 		color: var(--header-color-h6, #ffe838);
 	}
+
 	h1 {
 		font-size: 3rem;
 		font-weight: 300;
@@ -29,17 +42,93 @@
 		margin: 1rem 0;
 		color: var(--header-color-h1, #ffe838);
 	}
+
+	p {
+		font-size: var(--font-size-p, 1.1em);
+	}
 }
 
-.portfolio-description .cta {
+.portfolio-img img {
+	transition: transform 650ms;
+
+
+	/* Animation */
+	&:hover {
+		transform: scale(1.2);
+		border: 2px solid purple;
+		border-radius: 2em;
+	}
+}
+
+.btn-btn {
 	display: inline-block;
 	margin-top: 2.5rem;
-	font-size: 1.5rem;
-	color: #3883ff;
-	text-transform: uppercase;
-	transition: color 650ms;
-}
+	width: 15em;
+	height: 2.7em;
 
-.portfolio-description .cta:hover {
-	color: #2f67cd;
+	font-size: .9em;
+	line-height: 40px;
+	margin-left: 8em;
+	transform: translate(-50%, -50%);
+	border: none;
+	text-transform: uppercase;
+	text-decoration: none;
+
+
+	background-color: #00072f;
+	text-align: center;
+
+	color: #555;
+	border-radius: 40px;
+	transition: 5s;
+	letter-spacing: 2px;
+	overflow: hidden;
+	//cursor: url(/images/cursor.png), pointer;
+	cursor: pointer;
+
+	&:hover {
+		color: #fff;
+		box-shadow: -15px 0 50px rgba(022, 20, 152, 1), 15px 0 50px rgba(122, 0, 255, 1);
+		text-shadow: 0 0 10px rgba(255, 255, 255, 0.50), 0 0 25px rgba(255, 255, 255, 0.50), 0 0 0 35px rgba(255, 255, 255, 0.50);
+	}
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-color: rgba(255, 20, 152, 0);
+		filter: blur(4px);
+		transition: 5s;
+		z-index: -1;
+	}
+
+	&:hover::before {
+		background-color: rgba(255, 20, 152, 1);
+		transform: scaleX(5);
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		background-color: rgba(122, 0, 255, 0);
+		filter: blur(4px);
+		transition: 5s;
+		z-index: -1;
+		mix-blend-mode: lighten;
+	}
+
+	&:hover:after {
+		background-color: rgba(122, 0, 255, 1);
+		transform: scaleX(5);
+	}
+
 }

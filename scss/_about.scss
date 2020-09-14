@@ -3,6 +3,7 @@
 	align-items: center;
 	justify-content: center;
 }
+
 .about-heading {
 	text-align: center;
 	text-transform: uppercase;
@@ -14,6 +15,7 @@
 		opacity: 0.3;
 		color: rgba(255, 255, 255, 0.781);
 	}
+
 	h6 {
 		color: var(--header-color-h6, #0ddf6f);
 		text-decoration: underline;
@@ -21,12 +23,24 @@
 		padding-top: 15px;
 	}
 }
-b {
-	color: red;
-}
+
+
+
 .profile-img {
 	flex: 1;
 	margin-right: 5rem;
+
+	img {
+		transition: transform 650ms, border-radius 650ms;
+
+
+		/* Animation */
+		&:hover {
+			transform: scale(1.2);
+			border: 2px solid purple;
+			border-radius: 2em;
+		}
+	}
 }
 
 .about-details {
@@ -34,6 +48,7 @@ b {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+
 	p {
 		padding-bottom: 0;
 	}
@@ -47,30 +62,27 @@ b {
 		transition: color 650ms;
 	}
 }
-.btn {
-	background-color: #0ddf6f;
-	width: 8em;
-	height: 3em;
-	border: 3px solid grey;
-	margin-top: 25px;
-	border-radius: 50%;
-	text-align: center;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+
+.about-details .btn-btn {
+
+
 	a {
-		color: red;
+		color: yellow;
 	}
 }
+
 .fa-facebook-square:hover {
 	color: #4267b2;
 }
+
 .fa-twitter-square:hover {
 	color: #6e9bbe;
 }
+
 .fa-instagram-square:hover {
 	color: #ea4c89;
 }
+
 .fa-linkedin:hover {
 	color: #0ddf6f;
 }

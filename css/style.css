@@ -8,11 +8,14 @@
   --layout-main-width: 60em;
   --color-body-text: #000;
   --color-body-bgrd: white;
-  --color-border-default: #999;
+  --color-link-default: rgb(255, 255, 255);
+  --color-border-default: rgb(218, 27, 27);
+  --color-btn: linear-gradient(to right, #8231ae, #e70080, #ff553c, #f3a700, #a8eb12);
   --spacing-layout-elements: 2em;
   --header-color-h6: whitesmoke;
   --header-color-h1: white;
   --paragraph-color: yellow;
+  --font-size-p: 1.4em;
 }
 
 *,
@@ -371,15 +374,26 @@ li {
   padding-top: 15px;
 }
 
-b {
-  color: red;
-}
-
 .profile-img {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   margin-right: 5rem;
+}
+
+.profile-img img {
+  -webkit-transition: border-radius 650ms, -webkit-transform 650ms;
+  transition: border-radius 650ms, -webkit-transform 650ms;
+  transition: transform 650ms, border-radius 650ms;
+  transition: transform 650ms, border-radius 650ms, -webkit-transform 650ms;
+  /* Animation */
+}
+
+.profile-img img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border: 2px solid purple;
+  border-radius: 2em;
 }
 
 .about-details {
@@ -412,27 +426,8 @@ b {
   transition: color 650ms;
 }
 
-.btn {
-  background-color: #0ddf6f;
-  width: 8em;
-  height: 3em;
-  border: 3px solid grey;
-  margin-top: 25px;
-  border-radius: 50%;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.btn a {
-  color: red;
+.about-details .btn-btn a {
+  color: yellow;
 }
 
 .fa-facebook-square:hover {
@@ -602,6 +597,12 @@ b {
           flex: 1;
 }
 
+.myWebsite {
+  font-size: 2em;
+  -webkit-animation: pulseText 2s infinite alternate;
+  -webkit-transform: scale(4);
+}
+
 .portfolio-description {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -623,18 +624,99 @@ b {
   color: var(--header-color-h1, #ffe838);
 }
 
-.portfolio-description .cta {
-  display: inline-block;
-  margin-top: 2.5rem;
-  font-size: 1.5rem;
-  color: #3883ff;
-  text-transform: uppercase;
-  -webkit-transition: color 650ms;
-  transition: color 650ms;
+.portfolio-description p {
+  font-size: var(--font-size-p, 1.1em);
 }
 
-.portfolio-description .cta:hover {
-  color: #2f67cd;
+.portfolio-img img {
+  -webkit-transition: -webkit-transform 650ms;
+  transition: -webkit-transform 650ms;
+  transition: transform 650ms;
+  transition: transform 650ms, -webkit-transform 650ms;
+  /* Animation */
+}
+
+.portfolio-img img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border: 2px solid purple;
+  border-radius: 2em;
+}
+
+.btn-btn {
+  display: inline-block;
+  margin-top: 2.5rem;
+  width: 15em;
+  height: 2.7em;
+  font-size: .9em;
+  line-height: 40px;
+  margin-left: 8em;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #00072f;
+  text-align: center;
+  color: #555;
+  border-radius: 40px;
+  -webkit-transition: 5s;
+  transition: 5s;
+  letter-spacing: 2px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn-btn:hover {
+  color: #fff;
+  -webkit-box-shadow: -15px 0 50px #161498, 15px 0 50px #7a00ff;
+          box-shadow: -15px 0 50px #161498, 15px 0 50px #7a00ff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5), 0 0 25px rgba(255, 255, 255, 0.5), 0 0 0 35px rgba(255, 255, 255, 0.5);
+}
+
+.btn-btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 20, 152, 0);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  -webkit-transition: 5s;
+  transition: 5s;
+  z-index: -1;
+}
+
+.btn-btn:hover::before {
+  background-color: #ff1498;
+  -webkit-transform: scaleX(5);
+          transform: scaleX(5);
+}
+
+.btn-btn:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(122, 0, 255, 0);
+  -webkit-filter: blur(4px);
+          filter: blur(4px);
+  -webkit-transition: 5s;
+  transition: 5s;
+  z-index: -1;
+  mix-blend-mode: lighten;
+}
+
+.btn-btn:hover:after {
+  background-color: #7a00ff;
+  -webkit-transform: scaleX(5);
+          transform: scaleX(5);
 }
 
 .timeline ul {
@@ -730,6 +812,15 @@ b {
   }
 }
 
+@-webkit-keyframes pulseText {
+  0% {
+    color: red;
+  }
+  50% {
+    color: green;
+  }
+}
+
 .contact {
   background-color: #221e3f;
 }
@@ -804,6 +895,9 @@ input[type="submit"]:hover {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
   .landing-text {
     font-size: 1.5rem;
   }
@@ -863,6 +957,9 @@ input[type="submit"]:hover {
   }
   .timeline ul {
     margin: 0 0 0 auto;
+    position: relative;
+    left: 10rem;
+    width: 516px;
   }
   .timeline .date:before {
     left: -19.2rem;
@@ -933,6 +1030,35 @@ input[type="submit"]:hover {
   }
   .up {
     right: 2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about-heading h1 {
+    font-size: 5em;
+    right: 0.3em;
+  }
+  .about-heading h6 {
+    right: 1em;
+  }
+  .about-details .nav-list {
+    right: 1em;
+  }
+  .about-details .btn-btn {
+    left: 3em;
+    position: relative;
+  }
+  .about-details p {
+    padding-bottom: 0;
+    font-size: 1.4em;
+    width: 401px;
+  }
+  .timeline ul {
+    left: 3.5em;
+  }
+  .timeline p {
+    font-size: 1.3rem;
+    width: 300px;
   }
 }
 
@@ -1007,6 +1133,69 @@ input[type="submit"]:hover {
   .up {
     top: 0.5rem;
     right: 1rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .menu-toggler {
+    right: 1rem;
+  }
+  header {
+    height: 60vh;
+  }
+  img {
+    width: 100%;
+    position: relative;
+    right: 5em;
+  }
+  html:not(.no-js) [data-aos^="fade"][data-aos^="fade"].aos-animate {
+    width: 281px;
+    position: relative;
+    right: 3em;
+  }
+  .about-details li {
+    margin: 0 1rem;
+  }
+  .landing-text h6 {
+    width: 251px;
+    position: relative;
+    left: 3em;
+  }
+  .landing-text h1 {
+    font-size: 2.2rem;
+    position: relative;
+    right: 2em;
+  }
+  .about-details h1 {
+    font-size: 5rem;
+    right: 0.4em;
+  }
+  .about-details .nav-list {
+    right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    right: 1.5em;
+  }
+  .timeline h1 {
+    width: 183px;
+  }
+  .timeline ul {
+    position: relative;
+    left: 0;
+  }
+  .timeline p {
+    font-size: 1rem;
+    width: 210px;
+    position: relative;
+    right: 2em;
   }
 }
 

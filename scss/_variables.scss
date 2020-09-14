@@ -8,13 +8,14 @@
 
 	--color-body-text: #000;
 	--color-body-bgrd: white;
-	//--color-link-default: rgb(255, 255, 255);
+	--color-link-default: rgb(255, 255, 255);
 
-	--color-border-default: #999;
-
+	--color-border-default: rgb(218, 27, 27);
+	--color-btn: linear-gradient(to right, #8231ae, #e70080, #ff553c, #f3a700, #a8eb12);
 	--spacing-layout-elements: 2em;
 
 	--header-color-h6: whitesmoke;
 	--header-color-h1: white;
 	--paragraph-color: yellow;
+	--font-size-p: 1.4em;
 }

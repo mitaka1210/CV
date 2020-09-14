@@ -2,10 +2,27 @@
 	0% {
 		box-shadow: 0 0 0 0 rgba(253, 87, 191, 0.99);
 	}
+
 	75% {
 		box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0);
 	}
+
 	100% {
 		box-shadow: 0 0 0 0 rgba(253, 87, 191, 0);
+	}
+}
+
+
+
+
+@-webkit-keyframes pulseText {
+	0% {
+		color: red;
+
+	}
+
+	50% {
+		color: green;
+
 	}
 }
